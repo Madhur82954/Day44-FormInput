@@ -49,7 +49,7 @@ mobileInput.addEventListener('input', function () {
 const password = document.querySelector("#pwd");
 const errorPwd = document.querySelector(".pwd-error");
 password.addEventListener('input', function () {
-   let pwdRegex = RegExp("^.{8,}$");
+   let pwdRegex = RegExp("^[A-Z]{1}[A-Z a-z]{5,}([!*@#$%^&+=]{1}[0-9]{1,})$");//UC5//
    if (pwdRegex.test(password.value)) {
       errorPwd.textContent = "";
    }
