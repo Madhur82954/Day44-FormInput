@@ -33,3 +33,15 @@ emailInput.addEventListener('input', function () {
       errorEmail.textContent = " Invalid Email"
    }
 });
+//UC3//
+const mobileInput = document.querySelector("#tel");
+const errorMobile = document.querySelector(".tel-error");
+mobileInput.addEventListener('input', function () {
+   let mobileRegex = RegExp("^[0-9]{2}\\s[0-9]{10}$");
+   if (mobileRegex.test(mobileInput.value)) {
+      errorMobile.textContent = "";
+   }
+   else {
+      errorMobile.textContent = " Invalid Mobile Number"
+   }
+});
