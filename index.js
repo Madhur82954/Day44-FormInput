@@ -45,3 +45,15 @@ mobileInput.addEventListener('input', function () {
       errorMobile.textContent = " Invalid Mobile Number"
    }
 });
+//UC4//
+const password = document.querySelector("#pwd");
+const errorPwd = document.querySelector(".pwd-error");
+password.addEventListener('input', function () {
+   let pwdRegex = RegExp("^.{8,}$");
+   if (pwdRegex.test(password.value)) {
+      errorPwd.textContent = "";
+   }
+   else {
+      errorPwd.textContent = "Invalid Password";
+   }
+});
