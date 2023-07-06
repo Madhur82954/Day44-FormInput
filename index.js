@@ -21,3 +21,15 @@ text.addEventListener('input', function ()
       textError.textContent = " Invalid Name";
    }
 });
+//UC2//
+const emailInput = document.querySelector("#email");
+const errorEmail = document.querySelector(".email-error");
+emailInput.addEventListener('input', function () {
+   let emailRegex = RegExp('^(abc).?[a-z]{3,}[@](bl).?(co).?[a-z]{2,}$');
+   if (emailRegex.test(emailInput.value)) {
+      errorEmail.textContent = "";
+   }
+   else {
+      errorEmail.textContent = " Invalid Email"
+   }
+});
